@@ -1,0 +1,21 @@
+this is the table yhrough we can create table with foreign key
+
+
+create table tablename(
+id int AUTO_INCREAMENT NOT NULL,
+name varchar(100) NOT NULL,
+email varchar (20) NOT NULL,
+city int NOT NULL,
+primary key(id),
+foreign key(city) References city (CID)
+)
+
+to see the joining table data
+SELECT * from personal INNER JOIN city ON personal.city=city.cid
+
+if you want to see the particular columns
+SELECT p.id,p.name,p.email,c.cityname FROM personal p INNER JOIN  city c ON p.city=c.cid where c.cityname="karachi";
+
+IMP NOTE:-
+inner join will display only the relation data like foreign key with primary key 
+but left join display the whole data
